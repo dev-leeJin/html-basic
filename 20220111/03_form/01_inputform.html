@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input과 form</title>
+</head>
+<body>
+    <h1>input 요소들</h1>
+    <!--fieldest은 여닫는 부분 사이를 사각형으로 영역을 만들어줌
+    테이블처럼 네모영역으로 감싸주는데 테이블과 양식의 차이가 있다.-->
+    <!--legend는 전설이 아닌 법례이다.-->
+    <!--text는 한줄만 나오는 글을 작성하는 input이다-->
+    <!--password는 비밀번호를 작성하게 하는 input이다-->
+    <!--radio뭔가를 선택하게 하는 것이고 name이 중복된다면 그룹이 형성돼 하나만 선택이 된다. -->
+    <!--슬래스(/)는 적어도 안적어도 상관은 없다. <input/>을 대체하기 위해 쓰는건데 input같은 
+    닫는 부분이 없어도 닫혀진다.  -->
+    <!--checkbox는 radio랑 달리 중복 체크가 가능하다-->
+    <!--submit는 전송되게 하는 버튼을 만드는 것이고 reset은 작성한걸 취소하게 하는 버튼을 만든다.-->
+    <fieldset>
+        <legend>회원</legend>
+        <p>아이디 : <input type="text"/></p>
+        <p>비밀번호 : <input type="password"/></p>
+        <p>매일 수신여부 :
+            <input type="radio" name="recieve">예
+            <input type="radio" name="recieve">아니요
+        </p>
+        <p>
+            식사여부 :
+            <input type="radio" name="eat" />먹음
+            <input type="radio" name="eat" />안먹음
+            <input type="radio" name="eat" >먹는중
+        </p>
+        <p>
+            현재 공부중인것 :
+            <input type="checkbox" name="study">HTML
+            <input type="checkbox" name="study">CSS
+            <input type="checkbox" name="study">JavaScript
+        </p>
+        <p>제출
+            <input type="submit" value="전송">
+            <input type="reset" value="취소">
+        </p>
+    </fieldset>
+</body>
+</html>
