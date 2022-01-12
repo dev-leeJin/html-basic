@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 레이아웃</title>
+</head>
+<body>
+    <!--3단 레이아웃 구성을 div태그를 이용해 해 주세요.-->
+    <!-- 헤더 컨텐츠 풋터 영역 내부에도 div를 이용해 영역을 나눌 수 있다.(가상의 영역)-->
+    <!-- 컨텐츠 부분은 왼쪽(레프트 사이드바)와 오른쪽(라이트 사이드바)로 2단 레이아웃으로 나누는 경우가 많다. -->
+    <div id="header">
+        <div id="skipbar">
+            <a herf="#">컨텐츠 이동</a>
+        </div>
+    </div>
+    <div id="body">
+        <h1>ICT인재개발원</h1>
+        <h2>메인메뉴</h2>
+        <!--글로벌(전역)메모창-->
+        <ul>
+            <li>회사소개</li>
+            <li>과정소개</li>
+            <li>커뮤니티</li>
+            <li>문의</li>
+        </ul>
+    </div> <!--가로로 배열되길 원하지만 블록태그이기 때문에 세로로 나온다.
+                가로로 나열하려면 CSS를 배워야 한다. -->
+    <div id="left">
+        <h2>왼쪽 사이드바에 들어갈 내용입니다</h2>
+        <p>내용물</p>
+    </div>
+    <div id="center">
+        <h2>가운데 사이드바에 들어갈 내용입니다</h2>
+        <p>내용몰</p>
+    </div>
+    <div id="right">
+        <h2>오른쪽 사이드바에 들어갈 내용입니다</h2>
+        <p>내용물</p>
+    </div>
+    <div id="footer">
+        <address>
+            서울특별시 마포구 양화로 첨단빌딩 7층<br>
+            연락처 : 02-0202-0202<br>
+            COPYRIGHT &copy; ICT인재개발원 All Rights Reserved
+        </address>주소 끝난 지점
+    </div>
+</body>
+</html>
