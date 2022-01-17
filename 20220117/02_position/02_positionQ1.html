@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*content부분을 layout이 아닌 position을 사용하여 분리*/
+        body{
+            width: 550px;
+        }
+        #header{
+            border:2px solid red;
+            height: 100px;
+        }
+        #content{
+            border:2px solid blue;
+            height: 300px; 
+            position:relative;
+        }
+        #footer{
+            border:2px solid green;
+            height:100px;
+        }
+        .sidebar{
+            position: absolute;
+            left:0px;
+            top:0px;
+            border: 1px solid gray;
+            width: 220px; height: 300px
+        }
+        .contents{
+            border:1px solid darkgoldenrod;
+            width: 326px; height: 300px;
+            position: absolute;
+            left:220px;
+            top:0px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <p1>헤더</p1>
+      </div>
+      <div id="content">
+        <div class="sidebar">
+            사이드바<br/>
+        </div>
+        <div class="contents">
+            컨텐츠 <br/>
+        </div>
+      </div>
+      <div id="footer">
+          <p1>푸터</p1>
+      </div>
+</body>
+</html>

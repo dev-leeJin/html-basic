@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* 포지션은 블록을 박스의 위치를 기준으로 배치하는 기술이고
+        주로 컨텐츠를 겹치게 배열하거나 덮어씌우는 등의 상황에
+        유용하게 쓰입니다.
+        psition:static - 요소를 겹칠 수 없는 상태(디폴트값)
+        psition:relative - absolute속성의 축이 되는 요소
+        psition:absolute - relative의 자식에 걸면
+        relative 요소의 위치를 영점으로 삼음
+        position:fixed - 거의 안 씀, 구형브라우저에서 주로 사용 */ 
+        * { /*모든 요소의 마진과 패딩을 0으로 만듬*/
+            margin:0; padding: 0;
+        }
+        body{
+            font:12px "굴림", Gulim;
+            margin:20px;
+            background: url(img/bg_grid.gif);
+        }
+        /*부모요소(현재는 #box가 .myred, .myblue, .mygreen의 상위 태그로
+        자리하고 있습니다) 에는 position:relative가 붙습니다.*/
+        #box{
+            position:relative; width: 550px;
+            border: 1px solid royalblue;
+        }
+        p{
+            width: 130px; height: 80px; padding: 10px;
+            color:#fff; font-weight: bold;
+        } /* position 세팅이 안 된 red는 기존css설정대로 배치됌(body의 margin)*/
+        .myred{
+            background: red;
+        }
+        .myblue{ /*absolute(절대적인)는 기본적으로 좌측 최상단 0점에서 잡혀서 시작하는데 (겹치던지 말던지 절대적으로)
+                     relative가 box(부모태그)에 걸려있기 때문에 영점이 box의 0점으로 바뀐다.
+                     (부모태그에 relative가 걸린게 새로운 영점)*/
+            background: blue;
+            position:absolute;  /*실제로는 absolute는 공중에 떠있는것이기 겹치기보다는 공간이 다르다.*/
+            left:50px;
+            top:0px;
+            z-index:1; /*높이를 나타내는 축으로 기본적으로 0으로 잡혀있기 때문에 0보다 높은 1을
+                        주었기 때문에 가장 위로 올라온다.(높이가 더 높은게 앞으로 노출된다.)*/
+        }
+        .mygreen{
+            background: green;
+            position:absolute;
+            left:30px;
+            top:20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p class="myred">
+            박스의 크기와 위치를 잘 살펴봐야 합니다.
+        </p>
+        <p class="myblue">
+            박스의 포지션 속성을 바꿔가며 테스트합니다.
+        </p>
+        <p class="mygreen">
+            포지션을 이해하기 위해서는 많은 테스트가 필요합니다.
+        </p>
+    </div>
+</body>
+</html>
