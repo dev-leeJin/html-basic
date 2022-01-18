@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Q prompt를 이용해 입력받은 숫자에 해당하는
+        // 단수의 구구단을 출력하는 코드를 만들어주세요.
+        // 2~9단까지만 출력되게 만들어주세요.
+        var value = prompt("단수를 입력해주세요")
+
+        if(value>1 && value<10){ //value<10만 적으면 음수와 0까지 입력받게 만든다.
+            for(i = 1; i < 10; i++ ){
+                a = value*i;
+                document.write(value+ "*" + i + "=" + a + "<br/>")
+            }
+        }else{
+            document.write("2~9단만 입력해주세요")
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
