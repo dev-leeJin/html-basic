@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트에도 힙, 스택, 코드영역이 존재합니다.
+        // 따라서, 자바스크립트에도 지역개념이 존재하며
+        // 지역변수, 전역변수 개념도 존재합니다.
+        // 다른언어와 크게 다르지 않게 적용됩니다.
+        function theFnc(){ //중괄호 내부에 있는 것들을 지역변수라고 부름
+            var num;
+            num = 30;
+        } //닫는 부분을 만나 메모리적으로 봤을 때 스택 지역에서 사라짐
+
+        theFnc();
+        console.log(num) //메모리에서 사라졌기 때문에 에러가 뜸.
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
